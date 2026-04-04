@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golf Adventures — Gallery — Sunset Frontier</title>
+  <meta name="description" content="On the course and beyond it.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-wordmark">Sunset Frontier</a>
+    <div class="nav-links">
+      <a href="retreats.html" class="nav-link">Retreats</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle  active">Art</button>
+        <div class="nav-dropdown-menu">
+          <a href="writings.html" class="">Writings</a>
+          <a href="gallery.html" class="active">Gallery</a>
+        </div>
+      </div>
+      <a href="reiki.html" class="nav-link">Reiki</a>
+      <a href="about.html" class="nav-link">About</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE OVERLAY -->
+  <div class="nav-overlay" id="nav-overlay">
+    <button class="nav-overlay-close" id="nav-overlay-close" aria-label="Close menu">×</button>
+    <div class="nav-overlay-links">
+      <a href="retreats.html" class="nav-overlay-link">Retreats</a>
+      <a href="writings.html" class="nav-overlay-link">Writings</a>
+      <a href="gallery.html" class="nav-overlay-link active">Gallery</a>
+      <a href="reiki.html" class="nav-overlay-link">Reiki</a>
+      <a href="about.html" class="nav-overlay-link">About</a>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="section fade-in">
+      <div class="container-narrow text-center">
+        <h1 class="piece-title">Golf Adventures</h1>
+      </div>
+    </section>
+
+    <section class="section-sm fade-in">
+      <div class="container">
+        <a href="gallery.html" class="gallery-back-link">← Gallery</a>
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img src="assets/images/hero-retreats.jpg" alt="Campfire on the golf course at night">
+            <figcaption>Campfire on the golf course at night</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/images/image-cowboy-camping.jpg" alt="Morning camp on the golf course fairway">
+            <figcaption>Morning camp on the golf course fairway</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/images/gallery-sleeping-bag-green.jpg" alt="Sleeping bag on tee box overlooking snowy green">
+            <figcaption>Sleeping bag on tee box overlooking snowy green</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/images/gallery-bag-fairway.jpg" alt="Golf bag and pack on the fairway at dusk">
+            <figcaption>Golf bag and pack on the fairway at dusk</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/images/gallery-bike-hickory-woods.jpg" alt="Bike loaded with clubs at Hickory Woods">
+            <figcaption>Bike loaded with clubs at Hickory Woods</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/images/gallery-sunset-water.jpg" alt="Sunset over the water">
+            <figcaption>Sunset over the water</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/images/gallery-tent-woods.jpg" alt="Tent hidden in the woods">
+            <figcaption>Tent hidden in the woods</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/images/gallery-car-kayak.jpg" alt="Car with kayak on roof at the trailhead">
+            <figcaption>Car with kayak on roof at the trailhead</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Sunset Frontier · sunsetfrontier.com · @sunsetfrontier</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
