@@ -2,16 +2,19 @@
    CSS VARIABLES
    ============================================= */
 :root {
-  --color-bg: #1a1008;
-  --color-surface: #241610;
-  --color-text-primary: #f5ede0;
-  --color-text-secondary: #c4a882;
-  --color-accent: #c85a18;
-  --color-accent-dark: #a34912;
-  --color-border: #2e1a0c;
+  --color-bg: #f7efe3;
+  --color-surface: #eadcc6;
+  --color-text-primary: #2e1a0c;
+  --color-text-secondary: #566450;
+  --color-accent: #a8440f;
+  --color-accent-dark: #8a360b;
+  --color-border: #d9c6aa;
+  --color-night: #1e0e04;
+  --color-on-image: #fdf5e8;
+  --color-on-image-muted: #e3d2b8;
 
   --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', 'DM Sans', system-ui, sans-serif;
 
   --max-width: 760px;
   --max-width-narrow: 640px;
@@ -29,7 +32,7 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 19px;
   scroll-behavior: smooth;
 }
 
@@ -38,7 +41,7 @@ body {
   color: var(--color-text-primary);
   font-family: var(--font-sans);
   font-weight: 300;
-  line-height: 1.8;
+  line-height: 1.9;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -73,10 +76,10 @@ a:hover {
 .heading-xl { font-family: var(--font-serif); font-size: 48px; font-weight: 300; line-height: 1.2; }
 .heading-lg { font-family: var(--font-serif); font-style: italic; font-size: 28px; font-weight: 300; line-height: 1.4; }
 .heading-md { font-family: var(--font-serif); font-style: italic; font-size: 22px; font-weight: 300; line-height: 1.7; }
-.heading-sm { font-family: var(--font-serif); font-style: italic; font-size: 18px; font-weight: 300; line-height: 1.7; }
+.heading-sm { font-family: var(--font-serif); font-style: italic; font-size: 19px; font-weight: 300; line-height: 1.7; }
 
 /* Body */
-.body-lg    { font-size: 18px; line-height: 1.8; }
+.body-lg    { font-size: 19px; line-height: 1.9; }
 .body-sm    { font-size: 14px; line-height: 1.6; }
 
 /* Prose paragraphs */
@@ -181,17 +184,9 @@ a:hover {
   display: block;
 }
 
-/* Gradient overlay on landing hero */
-.hero-landing::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(14, 14, 14, 0.7) 0%,
-    rgba(14, 14, 14, 0.0) 60%
-  );
-  pointer-events: none;
+/* Landing hero sits on the page background */
+.hero-landing {
+  background-color: var(--color-bg);
 }
 
 /* Hero text container */
@@ -250,12 +245,24 @@ a:hover {
 .nav.scrolled {
   background: var(--color-bg);
   padding: 16px 40px;
+  box-shadow: 0 1px 0 var(--color-border);
+}
+
+/* Nav sitting on top of a full-bleed hero photo, before scroll */
+.has-hero .nav:not(.scrolled) .nav-wordmark,
+.has-hero .nav:not(.scrolled) .nav-link:not(.active),
+.has-hero .nav:not(.scrolled) .nav-dropdown-toggle {
+  color: var(--color-on-image);
+}
+
+.has-hero .nav:not(.scrolled) .nav-hamburger span {
+  background: var(--color-on-image);
 }
 
 .nav-wordmark {
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: 18px;
+  font-size: 19px;
   color: var(--color-text-primary);
   letter-spacing: 0.02em;
 }
@@ -521,7 +528,7 @@ a.wayfinding-link:hover {
 .details-row dd {
   font-family: var(--font-sans);
   font-weight: 300;
-  font-size: 18px;
+  font-size: 19px;
   color: var(--color-text-primary);
 }
 
@@ -530,7 +537,7 @@ a.wayfinding-link:hover {
    ============================================= */
 .calendly-btn {
   display: inline-block;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-text-secondary);
   background: transparent;
   color: var(--color-text-primary);
   font-family: var(--font-sans);
@@ -546,7 +553,7 @@ a.wayfinding-link:hover {
 
 .calendly-btn:hover {
   border-color: var(--color-accent);
-  color: var(--color-text-primary);
+  color: var(--color-accent);
 }
 
 .cta-subtext {
@@ -680,7 +687,7 @@ a.wayfinding-link:hover {
   left: 0;
   right: 0;
   background: linear-gradient(transparent, rgba(20, 10, 4, 0.82));
-  color: var(--color-text-primary);
+  color: var(--color-on-image);
   font-family: var(--font-sans);
   font-size: 13px;
   letter-spacing: 0.04em;
@@ -718,7 +725,7 @@ a.wayfinding-link:hover {
   min-height: 320px;
   overflow: hidden;
   text-decoration: none;
-  background-color: var(--color-surface);
+  background-color: var(--color-night);
 }
 
 .gallery-category-card img {
@@ -757,7 +764,7 @@ a.wayfinding-link:hover {
   font-weight: 300;
   font-size: 38px;
   letter-spacing: 0.04em;
-  color: var(--color-text-primary);
+  color: var(--color-on-image);
   margin: 0 0 8px;
 }
 
@@ -766,11 +773,12 @@ a.wayfinding-link:hover {
   font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-text-secondary);
+  color: var(--color-on-image-muted);
   margin: 0;
 }
 
-.gallery-category-card-empty .gallery-category-label h2 {
+.gallery-category-card-empty .gallery-category-label h2,
+.gallery-category-card-empty .gallery-category-label p {
   color: var(--color-text-secondary);
 }
 
@@ -974,7 +982,7 @@ a.wayfinding-link:hover {
   .heading-lg { font-size: 24px; }
   .heading-md { font-size: 20px; }
 
-  .hero-question { font-size: 18px; }
+  .hero-question { font-size: 19px; }
 
   .wayfinding-links {
     gap: 24px;
@@ -988,4 +996,229 @@ a.wayfinding-link:hover {
   .piece-title { font-size: 36px; }
 
   .writings-opening { font-size: 20px; }
+}
+
+.reiki-subtitle { margin-top: 1em; }
+
+/* =============================================
+   REVIEW SLIDER
+   ============================================= */
+.reviews-heading {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.review-slider {
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  grid-template-areas:
+    "prev track next"
+    ".    dots  .";
+  align-items: center;
+  column-gap: 16px;
+}
+
+.slider-track {
+  grid-area: track;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  outline-offset: 4px;
+}
+
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+.review-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  align-self: center;
+  padding: 0 8px;
+  text-align: center;
+}
+
+.review-slide p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+.review-slide cite {
+  display: block;
+  margin-top: 1.25em;
+  font-style: normal;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.slider-arrow {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-text-secondary);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.slider-arrow:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.slider-prev { grid-area: prev; }
+.slider-next { grid-area: next; }
+
+.slider-dots {
+  grid-area: dots;
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.slider-dot {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.slider-dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--color-border);
+  transition: background 0.2s;
+}
+
+.slider-dot[aria-current="true"]::after {
+  background: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .review-slider {
+    grid-template-columns: 44px 1fr 44px;
+    grid-template-areas:
+      "track track track"
+      "prev  dots  next";
+    column-gap: 0;
+  }
+
+  .slider-arrow,
+  .slider-dots {
+    margin-top: 24px;
+  }
+
+  .review-slide p {
+    font-size: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .slider-track {
+    scroll-behavior: smooth;
+  }
+}
+
+/* =============================================
+   REIKI PAGE: SPACING
+   ============================================= */
+.page-reiki .section + .section {
+  padding-top: 0;
+}
+
+.page-reiki .prose > h2:first-child {
+  margin-top: 0;
+}
+
+.page-reiki .prose > ul:last-child {
+  margin-bottom: 0;
+}
+
+.page-reiki .prose .cta-link {
+  display: inline;
+  margin-top: 0;
+}
+
+.page-reiki .reviews-heading {
+  margin-bottom: 1em;
+}
+
+.page-reiki .review-slide {
+  align-self: flex-start;
+}
+
+.page-reiki .slider-dots {
+  margin-top: 8px;
+}
+
+.slider-track {
+  align-items: flex-start;
+  transition: height 0.3s ease;
+}
+
+/* =============================================
+   HOME: TWO DOORS
+   ============================================= */
+.doors {
+  min-height: calc(100vh - 120px);
+  min-height: calc(100dvh - 120px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 16px;
+  text-align: center;
+}
+
+.doors-logo {
+  width: 180px;
+  margin: 0 auto 16px;
+}
+
+.doors-title {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  margin-bottom: 48px;
+}
+
+.doors-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.door-btn {
+  display: block;
+  padding: 18px 24px;
+  border: 1px solid var(--color-text-secondary);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+}
+
+.door-btn:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
 }
