@@ -1222,3 +1222,10 @@ a.wayfinding-link:hover {
   color: var(--color-accent);
   border-color: var(--color-accent);
 }
+
+/* Current-page link stays readable over the hero photo */
+.has-hero .nav:not(.scrolled) .nav-link.active {
+  color: var(--color-on-image);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
