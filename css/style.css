@@ -998,8 +998,6 @@ a.wayfinding-link:hover {
   .writings-opening { font-size: 20px; }
 }
 
-.reiki-subtitle { margin-top: 1em; }
-
 /* =============================================
    REVIEW SLIDER
    ============================================= */
@@ -1130,38 +1128,6 @@ a.wayfinding-link:hover {
   .slider-track {
     scroll-behavior: smooth;
   }
-}
-
-/* =============================================
-   REIKI PAGE: SPACING
-   ============================================= */
-.page-reiki .section + .section {
-  padding-top: 0;
-}
-
-.page-reiki .prose > h2:first-child {
-  margin-top: 0;
-}
-
-.page-reiki .prose > ul:last-child {
-  margin-bottom: 0;
-}
-
-.page-reiki .prose .cta-link {
-  display: inline;
-  margin-top: 0;
-}
-
-.page-reiki .reviews-heading {
-  margin-bottom: 1em;
-}
-
-.page-reiki .review-slide {
-  align-self: flex-start;
-}
-
-.page-reiki .slider-dots {
-  margin-top: 8px;
 }
 
 .slider-track {
