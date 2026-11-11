@@ -17,6 +17,11 @@
   status = 301
 
 [[redirects]]
+  from = "/videos.html"
+  to = "/events.html"
+  status = 301
+
+[[redirects]]
   from = "/reiki.html"
   to = "/"
   status = 301
