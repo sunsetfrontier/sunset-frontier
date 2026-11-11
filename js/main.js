@@ -1,5 +1,5 @@
 // =============================================
-// Sunset Frontier — main.js
+// Camp On Golf — main.js
 // GSAP + ScrollTrigger animations
 // =============================================
 
