@@ -7,6 +7,16 @@
   status = 301
 
 [[redirects]]
+  from = "/gallery-travels.html"
+  to = "/gallery.html"
+  status = 301
+
+[[redirects]]
+  from = "/writings/campgrounds-buhl-park.html"
+  to = "/events.html"
+  status = 301
+
+[[redirects]]
   from = "/reiki.html"
   to = "/"
   status = 301
