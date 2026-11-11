@@ -81,6 +81,37 @@
         </div>
       </div>
     </section>
+    <section class="section-sm fade-in">
+      <div class="container-narrow">
+        <h2 class="heading-md events-heading">Interested in having your course host an event?</h2>
+        <p class="form-subtext text-center">Send a note and we will be in touch.</p>
+
+        <form name="host-event" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field" class="host-form">
+          <input type="hidden" name="form-name" value="host-event">
+          <p class="form-honeypot">
+            <label for="bot-field">Leave this empty</label>
+            <input id="bot-field" name="bot-field" tabindex="-1" autocomplete="off">
+          </p>
+
+          <div class="form-field">
+            <label for="host-name">Name</label>
+            <input id="host-name" name="name" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="form-field">
+            <label for="host-email">Email</label>
+            <input id="host-email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-field">
+            <label for="host-message">Message</label>
+            <textarea id="host-message" name="message" rows="6" required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Send</button>
+        </form>
+      </div>
+    </section>
 
   </main>
 
