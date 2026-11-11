@@ -1271,3 +1271,16 @@ a.wayfinding-link:hover {
 .doors-upcoming .writing-entry {
   padding: 16px 0;
 }
+
+/* =============================================
+   PROSE: INLINE FIGURES
+   ============================================= */
+.prose-figure {
+  margin: 32px 0;
+}
+
+.prose-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
