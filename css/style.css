@@ -1327,12 +1327,3 @@ a.wayfinding-link:hover {
 .home-contact-link:hover {
   color: var(--color-accent);
 }
-
-/* =============================================
-   HOME: FEATURED VIDEO
-   ============================================= */
-.doors-video {
-  width: 100%;
-  max-width: 640px;
-  margin: 0 0 48px;
-}
