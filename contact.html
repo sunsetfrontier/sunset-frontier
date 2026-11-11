@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact ,  Camp On Golf</title>
+  <meta name="description" content="Get in touch with Camp On Golf about hosting an event at your course.">
+  <meta property="og:title" content="Contact ,  Camp On Golf">
+  <meta property="og:description" content="Get in touch with Camp On Golf about hosting an event at your course.">
+  <meta property="og:image" content="https://campongolf.com/assets/images/hero-landing.jpg">
+  <meta property="og:url" content="https://campongolf.com/contact.html">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-wordmark">Camp On Golf</a>
+    <div class="nav-links">
+      <a href="events.html" class="nav-link">Events</a>
+      <a href="writings.html" class="nav-link">Writings</a>
+      <a href="gallery.html" class="nav-link">Photos</a>
+      <a href="contact.html" class="nav-link active" aria-current="page">Contact</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE OVERLAY -->
+  <div class="nav-overlay" id="nav-overlay">
+    <button class="nav-overlay-close" id="nav-overlay-close" aria-label="Close menu">×</button>
+    <div class="nav-overlay-links">
+      <a href="events.html" class="nav-overlay-link">Events</a>
+      <a href="writings.html" class="nav-overlay-link">Writings</a>
+      <a href="gallery.html" class="nav-overlay-link">Photos</a>
+      <a href="contact.html" class="nav-overlay-link active" aria-current="page">Contact</a>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="section fade-in">
+      <div class="container-narrow">
+        <h1 class="heading-xl text-center" style="margin-bottom: 20px;">Contact</h1>
+        <p class="form-subtext text-center">Interested in having your course host an event? Send a note and we will be in touch.</p>
+
+        <form name="host-event" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field" class="host-form">
+          <input type="hidden" name="form-name" value="host-event">
+          <p class="form-honeypot">
+            <label for="bot-field">Leave this empty</label>
+            <input id="bot-field" name="bot-field" tabindex="-1" autocomplete="off">
+          </p>
+
+          <div class="form-field">
+            <label for="host-name">Name</label>
+            <input id="host-name" name="name" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="form-field">
+            <label for="host-email">Email</label>
+            <input id="host-email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-field">
+            <label for="host-message">Message</label>
+            <textarea id="host-message" name="message" rows="6" required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Camp On Golf · campongolf.com · @campongolf</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

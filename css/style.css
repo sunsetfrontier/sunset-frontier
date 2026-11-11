@@ -1304,3 +1304,35 @@ a.wayfinding-link:hover {
   position: absolute;
   left: -9999px;
 }
+
+/* =============================================
+   HOME: CONTACT LINK
+   ============================================= */
+.home-contact-link {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 8px;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  transition: color 0.2s;
+}
+
+.home-contact-link:hover {
+  color: var(--color-accent);
+}
+
+/* =============================================
+   HOME: FEATURED VIDEO
+   ============================================= */
+.doors-video {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 0 48px;
+}
